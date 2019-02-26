@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <script src="script.js"></script>
+    </head>
+    <body> 
+            <ul class="list-group" ng-repeat="user in users">
+                <span ng-if="!user">User not found</span>
+                <li class="list-group-item">
+                    <strong>{{user.name}}</strong><br>
+                    <strong>{{user.email}}</strong>
+                </li>
+            </ul>
+            <a ui-sref="users">Back to user page</a>
+    </body>
+</html>

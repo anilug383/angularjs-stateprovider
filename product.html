@@ -1,0 +1,36 @@
+<html>
+    <head>
+    <body>
+        <div class="container">
+            <table class="table">
+                <tbody>
+                    <tr ng-repeat="product in products">
+                        <td>
+                                <img  src="images/{{product.imageSrc}}.jpeg" style="height: 200px; width: 100px;">
+                        </td>
+                        <td>
+                            <ul class="list-group">
+                                <li class="list-group-item list-group-item-action">
+                                     Discount : {{product.productDiscount}}
+                                </li>
+                                <li class="list-group-item list-group-item-action"> 
+                                    Title : {{product.productTitle}}
+                                </li>
+                                <li class="list-group-item list-group-item-action">
+                                    Price : {{product.productDiscountPrice}}
+                                </li>
+                                <li class="list-group-item list-group-item-action">
+                                    Original Price : {{product.productOriginalPrice}}
+                                </li>
+                                <li class="list-group-item list-group-item-action">
+                                    <a class="add-to-cart" href="">+ Add To Cart</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+           
+        </div>
+    </body>
+</html>

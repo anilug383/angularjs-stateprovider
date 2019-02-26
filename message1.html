@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <script src="script.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.22/angular-ui-router.js"></script>
+        <style>
+                #users {
+                  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+                  border-collapse: collapse;
+                  width: 100%;
+                }
+                
+                #users td, #users th {
+                  border: 1px solid #ddd;
+                  padding: 8px;
+                }
+                
+                #users tr:nth-child(even){background-color: #f2f2f2;}
+                
+                #users tr:hover {background-color: #ddd;}
+                
+                #users th {
+                  padding-top: 12px;
+                  padding-bottom: 12px;
+                  text-align: left;
+                  background-color: #4CAF50;
+                  color: white;
+                }
+                </style>
+    </head>
+    <body>
+        <table id = "users">
+            <thead>
+                <th>Name</th>
+                <th>City</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </thead>
+            <tbody>
+                <tr ng-repeat="user in userList">
+                    <td>{{user.name}}</td>
+                    <td>{{user.email}}</td>
+                    <td><input type="button" class="btn btn-primary" value="Edit" ng-click="editUser(user)"></td>
+                    <td><input type="button" class="btn btn-primary" value="Delete" ng-click="deleteUser(user)"></td>
+                </tr>
+            </tbody>
+        </table>
+        
+    </body>
+</html>

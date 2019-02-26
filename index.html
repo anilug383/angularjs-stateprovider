@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.22/angular-ui-router.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <script src="script.js"></script>
+        <script src="app.js"></script>
+    </head>
+    <body ng-app="myApp">
+            <header ng-include="'header.html'"></header>
+        <div> 
+            <a class="btn btn-info" role="button" ui-sref="products"><span class="glyphicon glyphicon-home"></span> Products</a>
+            <a class="btn btn-info" role="button" ui-sref="message1"><span class="glyphicon glyphicon-home"></span> Users</a>
+            <a class="btn btn-info" role="button" ui-sref="message2"><span class="glyphicon glyphicon-user"></span> Login</a>
+            <a class="btn btn-info" role="button" ui-sref="users"><span class="glyphicon glyphicon-user"></span> Users</a>
+            <a class="btn btn-info" role="button" ui-sref="message3"><span class="glyphicon glyphicon-plus"></span> Square</a>
+            <div ui-view></div>
+           
+        </div>
+        <footer ng-include="'footer.html'"></footer>
+    </body>
+    
+</html>

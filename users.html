@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <input type="text" class="formControl" placeholder="Search User By Name" ng-model="searchKey">
+        <button ng-click="findUser(searchKey)">Search</button>
+        <ul class="list-group" ng-repeat="user in users">
+            <li class="list-group-item">
+                <a><strong>{{user.name}}</strong></a><br>
+                <strong>{{user.email}}</strong>
+            </li>
+        </ul>
+    </body>
+</html>
